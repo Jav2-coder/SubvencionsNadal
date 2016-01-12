@@ -27,9 +27,11 @@ public class App {
 			
 			while ((llistaRegals = llista.readLine()) != null) {
 
-				R.percentatgeRegals(llistaRegals);
+				R.recompteRegals(llistaRegals);
 				
 			}
+			
+			R.percentatgeRegals();
 
 		} catch (IOException e) {
 

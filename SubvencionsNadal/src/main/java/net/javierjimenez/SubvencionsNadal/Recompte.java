@@ -16,13 +16,70 @@ public class Recompte {
 		
 	}
 	
-	public void percentatgeRegals(String nen){
+	public void recompteRegals(String nen){
 		
 		Pattern p = Pattern.compile(".*?: (.*)"); 
 		Matcher m = p.matcher(nen);
 		m.matches();
 		String n = m.group(1);
-		//(.+?):(.+)($|-)
 		
+		Pattern p1 = Pattern.compile("([^:]+): ([^-]+)( - |$)");
+		Matcher m1 = p1.matcher(n);
+		
+		while(m1.find()){
+			
+			String nom = m1.group(1);
+			String regals = m1.group(2);
+			
+			if (totalRegals.containsKey(nom)) {
+
+				Pattern p2 = Pattern.compile(",");
+				Matcher m2 = p2.matcher(regals);
+				int contador = 1;
+				
+				while (m2.find()) {
+					contador++;
+				}
+				
+				totalRegals.get(nom).sumarRegals(contador);
+
+			} else {
+
+				Pattern p2 = Pattern.compile(",");
+				Matcher m2 = p2.matcher(regals);
+				int contador = 1;
+				
+				while (m2.find()) {
+					contador++;
+				}
+				
+				totalRegals.put(nom, new Personatge(nom, contador));
+
+			}
+		}	
+	}
+	
+	public void percentatgeRegals() {
+		
+		for (Personatge p : totalRegals.values()) {
+
+			personatges.add(p);
+		}
+		
+		double total = 0;
+		
+		for (int i = 0; i < personatges.size(); i++) {
+			
+			total = total + personatges.get(i).getRegals();
+			
+		}
+		
+		for (int i = 0; i < personatges.size(); i++) {
+			
+			float percent = (float) ((personatges.get(i).getRegals() *100) / total);
+			
+			System.out.print(personatges.get(i).getNom() + ": " + percent + "% ");
+			
+		}
 	}
 }
