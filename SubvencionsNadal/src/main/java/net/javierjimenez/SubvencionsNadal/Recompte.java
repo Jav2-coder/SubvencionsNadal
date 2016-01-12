@@ -22,6 +22,7 @@ public class Recompte {
 		Matcher m = p.matcher(nen);
 		m.matches();
 		String n = m.group(1);
+		//(.+?):(.+)($|-)
 		
 	}
 }
