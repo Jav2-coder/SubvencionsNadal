@@ -76,9 +76,9 @@ public class Recompte {
 		
 		for (int i = 0; i < personatges.size(); i++) {
 			
-			float percent = (float) ((personatges.get(i).getRegals() *100) / total);
+			double percent = Math.round(((personatges.get(i).getRegals() *100) / total) * 100.0) / 100.0;
 			
-			System.out.print(personatges.get(i).getNom() + ": " + percent + "% ");
+			System.out.println(personatges.get(i).getNom() + ": " + percent + "% ");
 			
 		}
 	}
