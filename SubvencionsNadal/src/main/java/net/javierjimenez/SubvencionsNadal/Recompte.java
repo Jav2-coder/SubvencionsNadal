@@ -25,7 +25,7 @@ public class Recompte {
 	private static List<Personatge> personatges = new ArrayList<Personatge>();
 	
 	/**
-	 * Constructor de l'objecte Recompte
+	 * Constructor de l'objecte Recompte 
 	 */
 	public Recompte() {
 		

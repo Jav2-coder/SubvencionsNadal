@@ -19,7 +19,7 @@ public class App {
 	/**
 	 * Metode principal del programa, on llegirem l'arxiu de text.
 	 * 
-	 * @param args
+	 * @param args 
 	 */
 	public static void main(String[] args) {
 		

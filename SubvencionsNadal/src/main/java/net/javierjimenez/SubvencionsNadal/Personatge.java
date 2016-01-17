@@ -18,7 +18,7 @@ public class Personatge {
 	private int regals;
 	
 	/**
-	 * Constructor de l'objecte Personatge
+	 * Constructor de l'objecte Personatge 
 	 * 
 	 * @param n Variable String que conte el nom de l'objecte Personatge
 	 * @param r Variable int que conte el total de regals que conte l'objecte
