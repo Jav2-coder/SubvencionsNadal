@@ -11,8 +11,16 @@ import java.io.InputStreamReader;
  */
 public class App {
 	
+	/**
+	 * Variable static que conte la direccio a l'arxiu a llegir.
+	 */
 	private static String NOM_FITXER = "/Llista.txt";
 	
+	/**
+	 * Metode principal del programa, on llegirem l'arxiu de text.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		BufferedReader llista = null;
@@ -41,8 +49,7 @@ public class App {
 
 			try {
 
-				if (llista != null)
-					llista.close();
+				if (llista != null) llista.close();
 
 			} catch (IOException ex) {
 
