@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 
 
 /**
- * Hello world!
+ * 
+ * @author Surrui
  *
  */
 public class App {
